@@ -1,6 +1,6 @@
 # Shark-tank
 
-TO DO's \n
+TO DO's 
 
 Decide a hypothesis (or hypotheses) with which you will clean the data
 
@@ -34,16 +34,8 @@ Consult documentation and resources provided to better understand the tools you 
 
 How to deliver the project
 
-Create a new repo with the name data-cleaning-pandas on your github account.
 
 Create a README.md file on repo root with project documentation. Make sure to include as much useful information as possible. Someone that finds the README.md should be able to fully get a gist of the project without browsing your files.
 
-Include a .gitignore
 
 At least 1 jupyter notebook is required
-
-Including your functions in a src.py is very, very highly reccommended (maybe even mandatory, check with your instructors)
-
-DO NOT UPLOAD SHARKs ATTACK DATASET TO GITHUB
-
-Open an Issue on this repo and paste your own repo's link.
