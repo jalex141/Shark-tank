@@ -20,22 +20,27 @@ def date_r(item):
     else:
         return "date not complete"
 
-def fix_time(time, age, fatal):
-    if time== "unknown" or time== "afternoon":
-        if age == "unknown" and fatal== "Y":
+def fix_time(item):
+    l= item.split("@")
+    t=l[0]; a=l[1]; f=l[2]
+    if t== "UNKNOWN" or t== "afternoon":
+        if a == "UNKNOWN" and (f== "Y" or f=="UNKNOWN"):
             return "evening"
+        else:
+            return t
     else:
-        return time
+        return t
+
 
 def daytime(item):
-    if re.search("(\d{2})h",item):
-        if int(re.search("(\d{2})h",item)) > 18 and int(re.search("(\d{2})h",item))<=4:
+    if re.match("(\d{2})",item):
+        if int(re.match("(\d{2})",item).group(0)) > 18 and int(re.match("(\d{2})",item).group(0))<=4:
             return "Night"
         else:
             return "Day"
     elif item == "evening":
         return "Night"
-    elif item == "unknown":
-        return "unknown"
+    elif item == "UNKNOWN":
+        return "UNKNOWN"
     else:
         return "Day"
