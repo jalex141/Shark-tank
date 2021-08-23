@@ -36,9 +36,9 @@ def moon(item):
         m=int(num_month(date[1]))
         d=int(date[0]);  y=int(date[2]);
 
-        return conway(d,m,y)
+        return phase_m(conway(d,m,y))
     except:
-        display(item)
+        pass
 
 
 # This is based on a 'do it in your head' algorithm by John Conway.
@@ -66,3 +66,12 @@ def conway(day, month, year):
         phase + 30
     return phase
 
+def phase_m(x):
+    if x>26 or x<4:
+        return "new"
+    elif x>=4 and x<11:
+        return "waxing"
+    elif x>=11 and x<19:
+        return "full"
+    elif x>=19 and x<26:
+        return "waning"
